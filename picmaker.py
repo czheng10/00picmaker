@@ -10,15 +10,17 @@ def main():
         for x in range(500):
             newx = x - 250
             newy = y - 250
+            # smaller circle
             if x>=250 and (((newx-125)**2 + (newy-125)**2) < (125**2)):
                     r= 210
                     g= int(x/500 * 255) % 255
                     b= int(y/500 * 255) % 255
-                
+            # bigger circle
             elif ((newx**2 + newy**2) < (250**2)):
                 r=210
                 g= int(y /500 * 255) % 255
                 b= int(x /500 * 255) % 255
+            # black background
             else:
                 r=0
                 g=0
